@@ -155,7 +155,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="AutoML script using auto-sklearn. (C) 2020 Nikolay Manchev, Domino Data Lab")
     parser.add_argument("--file", type=str, required=False, help="a CSV file containing the dataset")
-    parser.add_argument("--localfile", type=str, required=False, help="path to local DFS file",default="/mnt/data/raw/heart.csv")
+    parser.add_argument("--localfile", type=str, required=False, help="path to local DFS file",default="/mnt/code/data/raw/diabetes.csv")
     parser.add_argument("--discardfeatures",type=str,required=False,help="features (list of indices) to discard in training",default=[])  
     parser.add_argument("--target", type=int, required=True, help="target variable column index")
     parser.add_argument("--task", type=str, required=True, help="task type", choices=["classification", "regression"], default="classification")
