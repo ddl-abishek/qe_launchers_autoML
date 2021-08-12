@@ -166,7 +166,7 @@ if __name__ == "__main__":
     parser.add_argument("--test", type=restricted_float, required=False, help="size of the test test (0,1)", default=0.2)
     parser.add_argument("--valid", type=restricted_float, required=False, help="size of the validation set (0,1)", default=0.2)
     parser.add_argument("--seed", type=int, required=False, help="random seed used for sampling and fitting", default=1234)
-    parser.add_argument("--output", type=str, required=False, help="default output directory", default="/mnt/results/myrun")
+    parser.add_argument("--output", type=str, required=False, help="default output directory", default="/mnt/code/results/myrun")
     parser.add_argument("--tmp", type=str, required=False, help="temporary directory", default="tmp")
 
     args = parser.parse_args()
