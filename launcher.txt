@@ -18,19 +18,19 @@
     "parameterType" : "Text",
     "defaultValue" : "/mnt/code/data/raw/diabetes.csv"
   }, {
-    "name" : "target",
-    "description" : "(integer) Position of column containing target attribute. -1 indicates the last column.",
-    "allowedValues" : [ ],
-    "shouldQuoteValue" : true,
-    "parameterType" : "Text",
-    "defaultValue" : "-1"
-  }, {
     "name" : "output",
     "description" : "Location of output files including file name prefix",
     "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
     "defaultValue" : "/mnt/code/results/myrun"
+  }, {
+    "name" : "target",
+    "description" : "(integer) Position of column containing target attribute. -1 indicates the last column.",
+    "allowedValues" : [ ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "-1"
   }, {
     "name" : "task",
     "description" : "Task type",
@@ -41,7 +41,73 @@
     } ],
     "shouldQuoteValue" : true,
     "parameterType" : "Select",
-    "defaultValue" : "classification"
+    "defaultValue" : ""
+  }, {
+    "name" : "verbose",
+    "description" : "Verbose output in the log files",
+    "allowedValues" : [ ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Checkbox",
+    "defaultValue" : "true"
+  }, {
+    "name" : "header",
+    "description" : "CSV file contains header",
+    "allowedValues" : [ ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Checkbox",
+    "defaultValue" : "true"
+  }, {
+    "name" : "separator",
+    "description" : "Value separator in the CSV file",
+    "allowedValues" : [ {
+      "value" : "comma"
+    }, {
+      "value" : "tab"
+    }, {
+      "value" : "space"
+    }, {
+      "value" : "white_spaces"
+    }, {
+      "value" : "colon"
+    } ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "MultiSelect",
+    "defaultValue" : ""
+  }, {
+    "name" : "missing",
+    "description" : "Missing values treatment",
+    "allowedValues" : [ {
+      "value" : "drop"
+    }, {
+      "value" : "infer"
+    } ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Select",
+    "defaultValue" : ""
+  }, {
+    "name" : "test",
+    "description" : "(float) Test set size",
+    "allowedValues" : [ ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "0.2"
+  }, {
+    "name" : "valid",
+    "description" : "(float) Validation set size",
+    "allowedValues" : [ ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "0.2"
+  }, {
+    "name" : "discardfeatures",
+    "description" : "Enter list of features to discard while training. \ne.g. [15,16] removes columns '15' and '16' in the \nanalysis. \nDo not enter negative index value. \nIf there are no features to discard leave as an empty list `[]`",
+    "allowedValues" : [ ],
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "[]"
+  } ],
+  "hardwareTierId" : "small-k8s"
+}
   }, {
     "name" : "verbose",
     "description" : "Verbose output in the log files",
