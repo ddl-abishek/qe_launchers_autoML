@@ -1,2 +1,2 @@
 tpot==0.10.2
-scikit-learn
+-U scikit-learn
