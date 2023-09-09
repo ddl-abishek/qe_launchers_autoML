@@ -5,59 +5,62 @@
   "valuePassType" : "CommandLineSubstitutionPass",
   "parameters" : [ {
     "name" : "filename",
-    "description" : "CSV data. \nNote: Model inputs/features must be numeric \nIf a file is selected, the DFS file below will be ignored",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "File",
-    "defaultValue" : ""
+    "defaultValue" : "",
+    "description" : "CSV data. \nNote: Model inputs/features must be numeric \nIf a file is selected, the DFS file below will be ignored",
+    "allowedValues" : [ ]
   }, {
     "name" : "localfile",
-    "description" : "local DFS file\nNote: Model inputs/features must be numeric",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
-    "defaultValue" : "/mnt/code/data/raw/diabetes.csv"
+    "defaultValue" : "/mnt/code/data/raw/diabetes.csv",
+    "description" : "local DFS file\nNote: Model inputs/features must be numeric",
+    "allowedValues" : [ ]
   }, {
     "name" : "output",
-    "description" : "Location of output files including file name prefix",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
-    "defaultValue" : "/mnt/code/results/myrun"
+    "defaultValue" : "/mnt/code/results/myrun",
+    "description" : "Location of output files including file name prefix",
+    "allowedValues" : [ ]
   }, {
     "name" : "target",
-    "description" : "(integer) Position of column containing target attribute. -1 indicates the last column.",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
-    "defaultValue" : "-1"
+    "defaultValue" : "-1",
+    "description" : "(integer) Position of column containing target attribute. -1 indicates the last column.",
+    "allowedValues" : [ ]
   }, {
     "name" : "task",
+    "shouldQuoteValue" : true,
+    "parameterType" : "Select",
+    "defaultValue" : "",
     "description" : "Task type",
     "allowedValues" : [ {
       "value" : "classification"
     }, {
       "value" : "regression"
-    } ],
-    "shouldQuoteValue" : true,
-    "parameterType" : "Select",
-    "defaultValue" : ""
+    } ]
   }, {
     "name" : "verbose",
-    "description" : "Verbose output in the log files",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Checkbox",
-    "defaultValue" : "true"
+    "defaultValue" : "true",
+    "description" : "Verbose output in the log files",
+    "allowedValues" : [ ]
   }, {
     "name" : "header",
-    "description" : "CSV file contains header",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Checkbox",
-    "defaultValue" : "true"
+    "defaultValue" : "true",
+    "description" : "CSV file contains header",
+    "allowedValues" : [ ]
   }, {
     "name" : "separator",
+    "shouldQuoteValue" : true,
+    "parameterType" : "MultiSelect",
+    "defaultValue" : "",
     "description" : "Value separator in the CSV file",
     "allowedValues" : [ {
       "value" : "comma"
@@ -69,42 +72,40 @@
       "value" : "white_spaces"
     }, {
       "value" : "colon"
-    } ],
-    "shouldQuoteValue" : true,
-    "parameterType" : "MultiSelect",
-    "defaultValue" : ""
+    } ]
   }, {
     "name" : "missing",
+    "shouldQuoteValue" : true,
+    "parameterType" : "Select",
+    "defaultValue" : "",
     "description" : "Missing values treatment",
     "allowedValues" : [ {
       "value" : "drop"
     }, {
       "value" : "infer"
-    } ],
-    "shouldQuoteValue" : true,
-    "parameterType" : "Select",
-    "defaultValue" : ""
+    } ]
   }, {
     "name" : "test",
-    "description" : "(float) Test set size",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
-    "defaultValue" : "0.2"
+    "defaultValue" : "0.2",
+    "description" : "(float) Test set size",
+    "allowedValues" : [ ]
   }, {
     "name" : "valid",
-    "description" : "(float) Validation set size",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
-    "defaultValue" : "0.2"
+    "defaultValue" : "0.2",
+    "description" : "(float) Validation set size",
+    "allowedValues" : [ ]
   }, {
     "name" : "discardfeatures",
-    "description" : "Enter list of features to discard while training. \ne.g. [15,16] removes columns '15' and '16' in the \nanalysis. \nDo not enter negative index value. \nIf there are no features to discard leave as an empty list `[]`",
-    "allowedValues" : [ ],
     "shouldQuoteValue" : true,
     "parameterType" : "Text",
-    "defaultValue" : "[]"
+    "defaultValue" : "[]",
+    "description" : "Enter list of features to discard while training. \ne.g. [15,16] removes columns '15' and '16' in the \nanalysis. \nDo not enter negative index value. \nIf there are no features to discard leave as an empty list `[]`",
+    "allowedValues" : [ ]
   } ],
-  "hardwareTierId" : "small-k8s"
+  "environmentId" : "64f8eee189a77d4702a1561b",
+  "hardwareTierId" : "medium-k8s"
 }
