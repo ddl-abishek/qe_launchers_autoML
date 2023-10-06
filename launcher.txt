@@ -106,6 +106,5 @@
     "description" : "Enter list of features to discard while training. \ne.g. [15,16] removes columns '15' and '16' in the \nanalysis. \nDo not enter negative index value. \nIf there are no features to discard leave as an empty list `[]`",
     "allowedValues" : [ ]
   } ],
-  "environmentId" : "64f8eee189a77d4702a1561b",
   "hardwareTierId" : "medium-k8s"
 }
