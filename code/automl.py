@@ -39,9 +39,9 @@ def load_csv(filename, localfile, discardfeatures, header, sep):
     separators = {"comma":",", "tab":r"\t", "space":r"\s", "white_spaces":r"\s+","colon":";"}
 
     if len(filename) == 0:
-        data_df = pd.read_csv(localfile, sep=separators.get(sep), header=header, error_bad_lines=False)
+        data_df = pd.read_csv(localfile, sep=separators.get(sep), header=header, on_bad_lines='skip')
     else:
-        data_df = pd.read_csv(filename, sep=separators.get(sep), header=header, error_bad_lines=False)
+        data_df = pd.read_csv(filename, sep=separators.get(sep), header=header, on_bad_lines='skip')
 
     for feature in discardfeatures:
         if feature > data_df.shape[1]-1:
